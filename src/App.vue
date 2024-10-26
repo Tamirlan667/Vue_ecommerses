@@ -1,8 +1,10 @@
 <template>
   <div class="ыв">
     <the-header></the-header>
-    <the-main></the-main>
-    <the-footer></the-footer>
+    <div class="l">
+      <the-main></the-main>
+      <the-footer></the-footer>
+    </div>
   </div>
 </template>
 
@@ -34,7 +36,6 @@ export default {
   text-align: center;
   color: #222222;
   min-width: 320px;
-  max-width: 1280px;
   margin: 0 auto;
   display: grid;
   grid-template-rows: 130px minmax(calc(100vh - 260px), auto) 130px;
@@ -52,5 +53,10 @@ export default {
   #app {
     padding: 0;
   }
+}
+
+.l {
+  margin: 0 auto;
+  max-width: 1280px;
 }
 </style>

@@ -167,6 +167,7 @@ export default {
   flex-direction: column;
   align-items: flex-start;
 }
+
 .card__image-container {
   align-self: center;
   position: relative;
@@ -178,10 +179,21 @@ export default {
   width: 100%;
   height: 235px;
   object-fit: contain;
+  transition: transform 0.3s ease; /* Добавление анимации для изображения */
+}
+
+.card__image-container:hover .card__image {
+  transform: scale(1.1); /* Увеличение изображения при наведении */
 }
 
 .card__title {
   min-height: 43px;
+  opacity: 1; /* Сделать заголовок видимым изначально */
+  transition: opacity 0.5s ease; /* Плавное появление заголовка */
+}
+
+.card__container:hover .card__title {
+  opacity: 1; /* Заголовок станет видимым при наведении на карточку */
 }
 
 .card__like-btn {
@@ -213,6 +225,15 @@ export default {
   display: flex;
   justify-content: space-between;
   gap: 47px;
+}
+
+.card__form base-icon-button {
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Переход для кнопки */
+}
+
+.card__form base-icon-button:hover {
+  background-color: #ffa801; /* Изменение цвета фона */
+  transform: scale(1.05); /* Увеличение размера кнопки */
 }
 
 @media screen and (min-width: 768px) {
